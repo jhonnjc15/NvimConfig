@@ -1,8 +1,9 @@
+--Put the languaje after intall 
 local servers = {
 	"sumneko_lua",
-	-- "cssls",
-	-- "html",
-	-- "tsserver",
+	"cssls",
+	"html",
+	"tsserver",
 	"pyright",
 	-- "bashls",
 	"jsonls",

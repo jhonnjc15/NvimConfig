@@ -13,8 +13,10 @@ bufferline.setup {
     -- NOTE: this plugin is designed with this icon in mind,
     -- and so changing this is NOT recommended, this is intended
     -- as an escape hatch for people who cannot bear it for whatever reason
-	indicator_icon = nil,
-    indicator = { style = "icon", icon = "▎"},
+	  indicator_icon = nil,
+    indicator = { style = "icon", icon = "  "},
+    -- indicator = { style = "underline", icon = "  "},
+    
     buffer_close_icon = "",
     -- buffer_close_icon = '',
     modified_icon = "●",
@@ -37,6 +39,7 @@ bufferline.setup {
     tab_size = 21,
     diagnostics = false, -- | "nvim_lsp" | "coc",
     diagnostics_update_in_insert = false,
+    diagnostics = "nvim_lsp",
     -- diagnostics_indicator = function(count, level, diagnostics_dict, context)
     --   return "("..count..")"
     -- end,
@@ -55,7 +58,8 @@ bufferline.setup {
     --   if vim.fn.getcwd() == "<work-repo>" and vim.bo[buf_number].filetype ~= "wiki" then
     --     return true
     --   end
-    -- end,
+   -- end,
+
     offsets = { { filetype = "NvimTree", text = "", padding = 1 } },
     show_buffer_icons = true,
     show_buffer_close_icons = true,
@@ -64,13 +68,14 @@ bufferline.setup {
     persist_buffer_sort = true, -- whether or not custom sorted buffers should persist
     -- can also be a table containing 2 custom separators
     -- [focused and unfocused]. eg: { '|', '|' }
-    separator_style = "thin", -- | "thick" | "thin" | { 'any', 'any' },
+    separator_style = "thick", -- | "thick" | "thin" | { 'any', 'any' },
     enforce_regular_tabs = true,
     always_show_bufferline = true,
     -- sort_by = 'id' | 'extension' | 'relative_directory' | 'directory' | 'tabs' | function(buffer_a, buffer_b)
     --   -- add custom logic
     --   return buffer_a.modified > buffer_b.modified
     -- end
+    
   },
   highlights = {
     fill = {
